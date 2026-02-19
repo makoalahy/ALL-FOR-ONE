@@ -1,0 +1,5 @@
+{
+  "name": "FIKO",
+  "description": "Une application de journal de trading complète avec dashboard analytique, gestion de wallet et suivi d'objectifs de performance.",
+  "requestFramePermissions": []
+}

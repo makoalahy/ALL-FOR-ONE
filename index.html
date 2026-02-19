@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Journal de Trade Pro</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "var(--primary)",
+                        background: "var(--background)",
+                        card: "var(--card)",
+                        "text-main": "var(--text-main)",
+                        "text-muted": "var(--text-muted)",
+                        "accent-red": "var(--accent-red)",
+                        "border-main": "var(--border)",
+                        "nav-bg": "var(--nav-bg)"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+          /* Style Unique FIKO (Minimal Light) */
+          --primary: #10b77f;
+          --background: #f6f8f7;
+          --card: #ffffff;
+          --nav-bg: rgba(255, 255, 255, 0.9);
+          --text-main: #0f172a;
+          --text-muted: #64748b;
+          --border: #f1f5f9;
+          --accent-red: #ef4444;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Masquage global de la barre de défilement (l'outil vertical tactile) */
+        html, body, * {
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;     /* Firefox */
+        }
+        
+        *::-webkit-scrollbar {
+            display: none;             /* Safari and Chrome */
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-main);
+            /* Suppression du comportement de rebond pour éviter les outils système */
+            overscroll-behavior-y: none;
+            overflow-x: hidden;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+
+        *[title] {
+            pointer-events: auto;
+        }
+        
+        input::-webkit-contacts-auto-fill-button, 
+        input::-webkit-credentials-auto-fill-button {
+            visibility: hidden;
+            display: none !important;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "date-fns/": "https://esm.sh/date-fns@^4.1.0/",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@^3.8.2",
+    "xlsx": "https://esm.sh/xlsx@^0.18.5",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+</head>
+<body class="bg-background text-text-main font-sans antialiased">
+    <div id="root"></div>
+</body>
+</html>
